@@ -1,0 +1,24 @@
+# Your Solution
+version: "3"
+services:
+  inventory_management:
+    build: ./inventory_management
+    image: inventory-management:1
+    container_name: project4-inv
+    ports:
+      - "8080:80"
+  book_catalog:
+    build: ./book_catalog
+    image: book-catalog:1
+    container_name: project4-book
+    ports:
+      - "8000:80"
+#  networks:
+#      book:
+#        ipv4_address: "192.168.92.0/24"
+#networks:
+#  book:
+#    ipam:
+#    driver: default
+#    config:
+#      - subnet: "192.168.92.0/24"
