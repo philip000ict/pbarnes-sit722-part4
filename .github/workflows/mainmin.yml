@@ -6,6 +6,11 @@ steps:
       creds: ${{ secrets.AZURE_CREDENTIALS }}
 
   - name: Build and deploy Container App
-    uses: azure/container-apps-deploy-action@v1
+    uses: 
     with:
       imageToDeploy: conttask482ebook.azurecr.io/book_catalog:1
+
+  - name: Build and deploy Container App
+    uses: 
+    with:
+      imageToDeploy: conttask482ebook.azurecr.io/inventory_management:1
