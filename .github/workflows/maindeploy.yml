@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3 
       - name: First step
         run:  |
-              echo "Hello World!"
+              echo "CONTAINER_REGISTRY = " $CONTAINER_REGISTRY
               ./index.sh  
               
       - name: Second step
