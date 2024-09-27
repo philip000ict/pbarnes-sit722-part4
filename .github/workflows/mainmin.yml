@@ -1,0 +1,16 @@
+steps:
+
+  - name: Log in to Azure
+    uses: azure/login@v1
+    with:
+      creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+  - name: Build and deploy Container App
+    uses: 
+    with:
+      imageToDeploy: conttask482ebook.azurecr.io/book_catalog:1
+
+  - name: Build and deploy Container App
+    uses: 
+    with:
+      imageToDeploy: conttask482ebook.azurecr.io/inventory_management:1
