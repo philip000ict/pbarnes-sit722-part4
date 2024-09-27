@@ -9,7 +9,7 @@ WORKDIR /app
 COPY inventory_management/requirements.txt .
 
 # Install any needed dependencies specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r inventory_management/requirements.txt
 
 COPY inventory_management/app .
 # Run app.py when the container launches

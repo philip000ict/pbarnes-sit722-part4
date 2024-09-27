@@ -11,12 +11,7 @@
 #
 # Usage:
 #
-#   ./scripts/cd/deploy.sh
-#
+#   ./scripts/deploy.sh
 
-set -u # or set -o nounset
-: "$CONTAINER_REGISTRY"
-: "$NAME"
-: "$VERSION"
 
-envsubst < ./scripts/cd/${NAME}.yaml | kubectl apply -f -
+envsubst < ./scripts/kubernetes/deployment.yaml | kubectl apply -f -

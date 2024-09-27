@@ -10,15 +10,16 @@
 #
 # Usage:
 #
-#       ./scripts/cd/push-image.sh
+#       ./scripts/push-image.sh
 #
 
-set -u # or set -o nounset
-: "$CONTAINER_REGISTRY"
-: "$VERSION"
-: "$REGISTRY_UN"
-: "$REGISTRY_PW"
-: "$NAME"
+export REGISTRY_PW=$USER_PASSWORD
 
-echo $REGISTRY_PW | docker login $CONTAINER_REGISTRY --username $REGISTRY_UN --password-stdin
-docker push $CONTAINER_REGISTRY/$NAME:$VERSION
+
+
+
+echo $REGISTRY_PW | docker login rg4ebook --username cont4ebook --password-stdin
+
+docker push cont4ebook.azurecr.io/book-catalog:1
+
+docker push cont4ebook.azurecr.io/inventory-management:1

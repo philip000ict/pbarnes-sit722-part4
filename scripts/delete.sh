@@ -10,7 +10,9 @@
 #
 #   ./scripts/cd/delete.sh
 #
-set -u # or set -o nounset
-: "$NAME"
+#set -u # or set -o nounset
+#: "$NAME"
 
-envsubst < ./scripts/cd/${NAME}.yaml | kubectl delete -f -
+#envsubst < ./scripts/kubernetes/deployment.yaml | kubectl delete -f -
+
+./scripts/kubernetes/deployment.yaml | kubectl delete -f -

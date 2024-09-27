@@ -7,9 +7,10 @@ FROM python:3.9-slim
 WORKDIR /app
 
 COPY book_catalog/requirements.txt .
+#COPY requirements.txt .
 
 # Install any needed dependencies specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 
 COPY book_catalog/app/ .
 # Run app.py when the container launches
