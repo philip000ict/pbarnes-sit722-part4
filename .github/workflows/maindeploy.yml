@@ -13,7 +13,7 @@ jobs:
       - name: First step
         run:  |
               echo "build image"
-              ./script/build-image.sh 
+              ./scripts/build-image.sh 
               
       - name: Second step
         run:  |
