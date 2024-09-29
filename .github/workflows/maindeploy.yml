@@ -13,9 +13,4 @@ jobs:
       - name: First step
         run:  |
               echo "build image"
-              ./scripts/build-image.sh 
-              
-      - name: Second step
-        run:  |
-              echo "kubenetes config"
-              ./scripts/kubernetes/deployment.yaml 
+
